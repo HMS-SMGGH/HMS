@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 // NEW CHANGE: Import the external CSS file
 import './studentlogin.css'; 
 
@@ -117,7 +118,7 @@ function LoginForm() {
             <div className="login-footer">
               <a href="#" className="link-blue">Forgot Password?</a>
               <span className="divider">|</span>
-              <a href="#" className="link-pink">Need Account? Sign Up</a>
+              <Link to="/signup" className="link-pink">Need Account? Sign Up</Link>
             </div>
 
           </form>
