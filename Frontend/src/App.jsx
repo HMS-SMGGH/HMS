@@ -3,18 +3,29 @@ import Signup from "./pages/signup page/signup.jsx";
 import LoginForm from "./pages/loginpages/studentlogin.jsx";
 import ForgotPassword from "./pages/forgot page/fogotpassword.jsx";
 
+// import Homepage from "./pages/loginpages/homepage.jsx";
 
 function App() {
   return (
+   
     <Router>
       <Routes>
         <Route path="/" element={<Signup />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/studentLogin" element={<LoginForm />} />
-        <Route path="/forgotpassword" element={<ForgotPassword/>} />
+        {/* <Route path="/forgotpassword" element={<Signup/>} /> */}
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/studentLogin" element={<LoginForm />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
+
+        
+        {/* <Route path="/homepage" element={<Homepage />} /> */}
       </Routes>
     </Router>
+  
   );
 }
 
 export default App;
+
