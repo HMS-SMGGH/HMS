@@ -1,0 +1,47 @@
+/* --- 4. Main Content Area (REVISED) --- */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #ffffff; /* White background for good text visibility */
+    overflow-y: auto;
+    
+    /* --- NEW BACKGROUND STYLES START HERE --- */
+    background-image: url('path/to/your/chitchat_group_illustration.jpg'); 
+    
+    /* Position the image centrally */
+    background-position: center center;
+    
+    /* Make the image cover the entire content area */
+    background-size: cover; 
+    
+    /* Prevent image from repeating */
+    background-repeat: no-repeat;
+    
+    /* Optional: Use a semi-transparent white layer on top for text visibility */
+    /* This creates a subtle, watermark-like effect */
+    position: relative; /* Needed for pseudo-element positioning */
+    z-index: 1; /* Ensure content is above the image */
+}
+
+/* Pseudo-element to create a transparent overlay */
+.main-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Semi-transparent white overlay to fade the image */
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust 0.7 (70% opacity) for desired fade */
+    z-index: -1; /* Place the overlay beneath the main content */
+}
+/* --- NEW BACKGROUND STYLES END HERE --- */
+
+.main-content h1 {
+    color: #34495e;
+    margin-bottom: 15px;
+    /* Ensure content has higher z-index than the overlay */
+    position: relative; 
+    z-index: 2;
+}
+/* ... (rest of the original CSS) ... */

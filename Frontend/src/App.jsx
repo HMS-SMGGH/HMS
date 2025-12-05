@@ -3,7 +3,7 @@ import Signup from "./pages/signup page/signup.jsx";
 import LoginForm from "./pages/loginpages/studentlogin.jsx";
 import ForgotPassword from "./pages/forgot page/fogotpassword.jsx";
 
-// import Homepage from "./pages/loginpages/homepage.jsx";
+import Homepage from "./pages/loginpages/homepage.jsx";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/forgotpassword" element={<ForgotPassword />} />
 
         
-        {/* <Route path="/homepage" element={<Homepage />} /> */}
+        <Route path="/homepage" element={<Homepage />} />
       </Routes>
     </Router>
   
