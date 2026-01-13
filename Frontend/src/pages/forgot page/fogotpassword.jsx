@@ -91,7 +91,7 @@ function ForgotPassword() {
       {/* Forgot Password Container */}
       <div className="forgot-container">
         <h1>Forgot Password?</h1>
-<p style={{ marginBottom: "55px" }}>Reset Your Password</p>
+        <p style={{ marginBottom: "55px" }}>Reset Your Password</p>
 
         <label>Email Address</label>
         < input type="email" placeholder="Enter your email"  />
