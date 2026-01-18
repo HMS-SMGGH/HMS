@@ -9,8 +9,9 @@
   width: 100%;
   z-index: 1000; /* Stays above everything */
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.05); /* Very light overlay */
-  backdrop-filter: blur(8px); /* Optional: creates a cool glass effect */
+  /* --- CHANGE IS HERE --- */
+  background: rgba(0, 0, 0, 0.4); /* 0.6 = 60% opacity black */
+  backdrop-filter: blur(8px);    /* Optional: Makes the background behind it blurry */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 

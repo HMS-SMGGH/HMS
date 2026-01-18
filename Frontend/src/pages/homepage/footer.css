@@ -1,5 +1,8 @@
 .footer {
-  background: #050a1a;
+  /* --- CHANGE IS HERE --- */
+  background: rgba(0, 0, 0, 0.4); /* 0.6 = 60% opacity black */
+  backdrop-filter: blur(8px);    /* Optional: Makes the background behind it blurry */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   color: #a0aec0;
   padding: 4rem 5% 1rem;
   margin-top: auto;

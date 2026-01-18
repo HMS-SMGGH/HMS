@@ -7,44 +7,43 @@ import backgroundImage from "../../assets/background.jpg";
 
 const LandingPage = () => {
   return (
-    <>
-      <main className="landing-container">
-        {/* Static Background Image */}
-        <div 
-          className="bg-static" 
-          style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${backgroundImage})` }}
-        ></div>
+    <div className="main-wrapper">
+      
+      {/* LAYER 1: Fixed Background Image */}
+      <div 
+        className="bg-fixed" 
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        <div className="bg-overlay"></div> {/* Optional dark tint */}
+      </div>
 
-        {/* Animated Bubbles Layer */}
-        <div className="bubbles-container">
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-        </div>
-        
+      {/* LAYER 2: Floating Bubbles */}
+      <div className="bubbles-container">
+        {/* Generating 10 bubbles for the effect */}
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+      </div>
 
+      {/* LAYER 3: The Content (Scrollable) */}
+      <div className="content-scrollable">
         <Header />
+        
+        {/* Your Body component contains the hostel info */}
+        <Body />
 
-        {/* REPLACEMENT: 
-           Instead of the old static hero-overlay, 
-           we now use the Body component you created.
-        */}
-        <div className="content-wrapper">
-           <Body />
-        </div>
+        <Footer />
+      </div>
 
-      </main>
-
-      <Footer />
-    </>
+    </div>
   );
 };
 
 export default LandingPage;
-
-

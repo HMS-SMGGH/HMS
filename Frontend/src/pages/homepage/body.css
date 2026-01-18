@@ -10,7 +10,7 @@
   flex-direction: column;
   gap: 120px; /* Space between the two hostel sections */
   padding: 100px 5%; /* Top, Side, Bottom padding */
-  background: transparent; /* Taaki landing page ki image dikhe */
+  /* background: transparent; Taaki landing page ki image dikhe */
   width: 100%;
   box-sizing: border-box;
 
