@@ -1,0 +1,157 @@
+/* --- Global Scroll & Reset --- */
+:host, :root, body {
+  overflow-y: auto !important; /* Forces scrollbar for long content */
+  scroll-behavior: smooth;
+}
+
+/* --- Main Wrapper --- */
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* Space between the two hostel sections */
+  padding: 100px 5%; /* Top, Side, Bottom padding */
+  background: transparent; /* Taaki landing page ki image dikhe */
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+/* --- Individual Sections --- */
+.body-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh; /* Har section ko screen par prominence milegi */
+  width: 100%;
+}
+
+.body-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 80px;
+}
+
+/* --- Image Side --- */
+.body-image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.body-img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  /* Floating effect and soft shadow */
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
+  animation: floating 6s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+
+.body-img:hover {
+  transform: scale(1.03);
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* --- Text Box with Glassmorphism --- */
+.body-text-box {
+  flex: 1;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  /* Solid color ki jagah transparent white use karein */
+  /* background: ; */
+  background: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(10px); /* Piche ki image halki blur dikhegi */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+.body-title {
+  font-size: 3.2rem;
+  margin-bottom: 25px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.body-title span {
+  color: #64ffda; /* Teal accent matches buttons */
+}
+
+.body-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #ccd6f6;
+  margin-bottom: 40px;
+}
+
+/* --- Buttons --- */
+.body-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-main {
+  padding: 15px 35px;
+  background: #64ffda;
+  color: #0a192f;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline {
+  padding: 15px 35px;
+  background: transparent;
+  color: #64ffda;
+  border: 2px solid #64ffda;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+  background: #52d1b2;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(100, 255, 218, 0.3);
+}
+
+.btn-outline:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateY(-5px);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+  .body-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .body-title {
+    font-size: 2.5rem;
+  }
+  
+  .body-actions {
+    justify-content: center;
+  }
+
+  .body-text-box {
+    padding: 30px;
+  }
+}

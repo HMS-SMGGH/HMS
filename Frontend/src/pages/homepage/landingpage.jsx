@@ -2,6 +2,7 @@ import React from 'react';
 import './landingpage.css';
 import Header from './header';
 import Footer from './footer';
+import Body from './body';
 import backgroundImage from "../../assets/background.jpg";
 
 const LandingPage = () => {
@@ -11,7 +12,7 @@ const LandingPage = () => {
         {/* Static Background Image */}
         <div 
           className="bg-static" 
-          style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${backgroundImage})` }}
+          style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${backgroundImage})` }}
         ></div>
 
         {/* Animated Bubbles Layer */}
@@ -25,16 +26,18 @@ const LandingPage = () => {
           <div className="bubble"></div>
           <div className="bubble"></div>
         </div>
+        
 
         <Header />
 
-        <div className="hero-overlay">
-          <div className="hero-content">
-            <h1>Modern Living <br /><span>Simplified</span></h1>
-            <p>The ultimate hostel management platform for students and staff.</p>
-            
-          </div>
+        {/* REPLACEMENT: 
+           Instead of the old static hero-overlay, 
+           we now use the Body component you created.
+        */}
+        <div className="content-wrapper">
+           <Body />
         </div>
+
       </main>
 
       <Footer />
